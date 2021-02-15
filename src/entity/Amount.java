@@ -2,7 +2,7 @@ package entity;
 
 public class Amount {
 
-    private String currency;
+    private Currency currency;
     private Double numberAmount;
 
     @Override
@@ -13,11 +13,11 @@ public class Amount {
                 '}';
     }
 
-    public String getCurrency() {
+    public Currency getCurrency() {
         return currency;
     }
 
-    public void setCurrency(String currency) {
+    public void setCurrency(Currency currency) {
         this.currency = currency;
     }
 

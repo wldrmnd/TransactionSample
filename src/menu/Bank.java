@@ -2,6 +2,7 @@ package menu;
 
 import entity.Amount;
 import entity.CardHolder;
+import entity.Currency;
 import entity.Transaction;
 import service.TransactionService;
 
@@ -84,8 +85,8 @@ public class Bank {
 
         Amount amount = new Amount();
         System.out.println("Введи валюту перевода");
-        String currencyFromConsole = in.next();
-        amount.setCurrency(currencyFromConsole);
+        Currency currency = Currency.valueOf(in.next());
+        amount.setCurrency(currency);
         System.out.println("Введи сколько денег перевести");
         Double numberAmountFromConsole = in.nextDouble();
         amount.setNumberAmount(numberAmountFromConsole);
